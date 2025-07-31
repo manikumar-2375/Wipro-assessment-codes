@@ -1,0 +1,54 @@
+<!-- HTML=>HYPERTEXT MARKUP LANGUAGE(CLIEND SIDE +FRONT END WEB DESIGN LANGUAGE) -->
+<!-- Every browser supports HTML Language.
+HTML allows you to create web documents. 
+Useful for beginners in web design. -->
+<html>
+<head>
+<title>
+RegistrationPage
+</title>
+</head>
+<body bgcolor=lightyellow>
+<!--default(get)::doGet,post::doPost-->
+<!-- 
+doGet()Vs doPost()::::
+
+In doget() Parameters not encrypted.	In dopost() Parameters encrypted.
+doget() allows bookmark.	dopost() disallows bookmark.
+doget() method is idempotent.	dopost() method does not idempotent..
+In doget() not change anything on the server.	In dopost() server is expected to remember.
+doget() is request information.	dopost() is provide information.
+In doget() parameters are appended to URL and sent with header information.	In dopost(), on the other hand, will send the information through socket back to the webservers and it won�t show in the URL bar.
+doget() is Faster.	dopost() Slower.
+In doget() only 1024 characters limit.	In dopost() doest not have limit.
+ -->
+ 
+ <!-- ServletName=>FormValues -->
+ 
+<form action="FormValues" method="post">
+Username:<input type="text"  name="u1" ><br>
+Password:<input type="password" name="p1"><br>
+Language:
+<input type="checkbox" name="c1" value="English">English-US
+<input type="checkbox" name="c1" value="Tamil">Tamil
+<input type="checkbox" name="c1" value="Hindi">Hindi
+<input type="checkbox" name="c1" value="Malayalam">Malayalam<BR>
+Gender:
+<input type="radio" name="r1" value="M">Male
+<input type="radio" name="r1" value="F">Female<BR>
+    Qualification:
+    <select name="s1" multiple>
+        <option value="M.C.A">M.C.A</option>
+        <option value="M.B.A">M.B.A</option>
+        <option value="M.SC">M.SC</option>
+        <option value="M.E">M.E</option>
+        <option value="M..B.B.S">M.B.B.S</option>
+    </select>
+
+    <!-- submit:: connect to <form> tag (servlet name=>server side) -->
+<input type="submit" value="SignIn">
+  <!-- reset::clear all the form fields -->
+<input type="reset" value="Clear">
+</form>
+</body>
+</html>
