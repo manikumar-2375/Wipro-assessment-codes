@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+           http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="bankBean" class="springqns.Bank">
+        <constructor-arg value="1001"/>
+        <constructor-arg value="State Bank of India"/>
+    </bean>
+
+    <bean id="accountBean" class="springqns.Account">
+        <constructor-arg value="12345678"/>
+        <constructor-arg value="Mani Kumar"/>
+        <constructor-arg value="100000.50"/>
+        <constructor-arg ref="bankBean"/>
+    </bean>
+
+</beans>
