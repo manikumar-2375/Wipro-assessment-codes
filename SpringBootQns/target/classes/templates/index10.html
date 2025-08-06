@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Customer Form Validation 10</title>
+    <style>
+        .error { color: red; font-size: 0.9em; }
+        label { display: inline-block; width: 100px; }
+        input, select { margin-bottom: 6px; }
+    </style>
+</head>
+<body>
+<h2>Customer Save Page (Q10)</h2>
+
+<div th:if="${successMessage}">
+    <p style="color:green;" th:text="${successMessage}"></p>
+</div>
+
+<form th:action="@{/customer-form10}" th:object="${customerForm10}" method="post">
+    <div>
+        <label>Name:</label>
+        <input type="text" th:field="*{name}" />
+        <span class="error" th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></span>
+    </div>
+    <div>
+        <label>Email:</label>
+        <input type="text" th:field="*{email}" />
+        <span class="error" th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></span>
+    </div>
+    <div>
+        <label>Age:</label>
+        <input type="number" th:field="*{age}" />
+        <span class="error" th:if="${#fields.hasErrors('age')}" th:errors="*{age}"></span>
+    </div>
+    <div>
+        <label>Gender:</label>
+        <select th:field="*{gender}">
+            <option value="">Select Gender</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Other">Other</option>
+        </select>
+        <span class="error" th:if="${#fields.hasErrors('gender')}" th:errors="*{gender}"></span>
+    </div>
+    <div>
+        <label>Birthday:</label>
+        <input type="text" placeholder="MM/DD/YYYY" th:field="*{birthday}" />
+        <span class="error" th:if="${#fields.hasErrors('birthday')}" th:errors="*{birthday}"></span>
+    </div>
+    <div>
+        <label>Phone:</label>
+        <input type="text" th:field="*{phone}" />
+        <span class="error" th:if="${#fields.hasErrors('phone')}" th:errors="*{phone}"></span>
+    </div>
+    <div>
+        <button type="submit">Save Customer</button>
+    </div>
+</form>
+</body>
+</html>
