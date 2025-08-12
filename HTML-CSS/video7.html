@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5 Multimedia Lab</title>
+    <link rel="stylesheet" href="styles7.css">
+</head>
+<body>
+    <h1>HTML5 Multimedia Lab</h1>
+    <p>This page demonstrates video, audio, embed (PDF), iframe, and inline SVG. Below is a visual preview.</p>
+
+    <!-- Video -->
+    <h2>Video</h2>
+    <video width="500" height="300" controls poster="poster.jpg">
+        <source src="sample.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- Audio -->
+    <h2>Audio</h2>
+    <audio controls loop>
+        <source src="sample.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <!-- Embed PDF -->
+    <h2>Embed</h2>
+    <embed src="document.pdf" type="application/pdf" width="300" height="300">
+    <p>If not visible, download <a href="document.pdf">document.pdf</a></p>
+
+    <!-- Iframe -->
+    <h2>Iframe</h2>
+    <iframe src="demo.html" width="500" height="150" title="Iframe example"></iframe>
+    <p>Preview created for the HTML5 Multimedia Lab. Files saved in the workspace.</p>
+
+    <!-- Inline SVG -->
+    <h2>Inline SVG</h2>
+    
+    <svg width="100" height="100" xmlns="http://www.w3.org/2000/svg">
+    <!-- A simple red circle -->
+    <circle cx="50" cy="50" r="40" stroke="black" stroke-width="2" fill="red" />
+    </svg>
+
+</body>
+</html>

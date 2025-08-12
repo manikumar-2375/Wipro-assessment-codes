@@ -1,0 +1,31 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+h1 {
+    font-size: 24px;
+}
+
+h2 {
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+video, audio, embed, iframe, svg {
+    display: block;
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+embed {
+    border: 1px solid #ccc;
+}
+
+iframe {
+    border: 1px solid #ccc;
+}
+
+svg {
+    border: 1px solid #ccc;
+}

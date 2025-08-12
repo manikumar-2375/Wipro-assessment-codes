@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>BookWorld - Your Online Bookstore</title>
+</head>
+<body>
+
+  <!-- Banner image -->
+  <img src="book.jpg" alt="Books banner" width="1000" />
+
+  <!-- Main heading -->
+  <h1>Welcome to BookWorld</h1>
+
+  <!-- Short description paragraph -->
+  <p>
+    BookWorld is a premier online bookstore. There's a pendulum of a wise range of titles
+    selected to deliver generous enjoyment, and secure shopping experience for every reader.
+  </p>
+
+  <!-- Book Categories table -->
+  <h2>Book Categories</h2>
+  <table border="1" cellpadding="8" cellspacing="0">
+    <thead>
+      <tr>
+        <th>Category</th>
+        <th>Number of Books</th>
+        <th>Top Author</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Fiction</td>
+        <td align="right">2,345</td>
+        <td>J.K. Rowling</td>
+      </tr>
+      <tr>
+        <td>Non-Fiction</td>
+        <td align="right">1,789</td>
+        <td>Malcolm Gladwell</td>
+      </tr>
+      <tr>
+        <td>Children's</td>
+        <td align="right">1,234</td>
+        <td>Roald Dahl</td>
+      </tr>
+      <tr>
+        <td>Science</td>
+        <td align="right">980</td>
+        <td>Stephen Hawking</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Two-column area using a table for basic layout (allowed tags only) -->
+  <table border="0" cellpadding="10" cellspacing="0" width="100%">
+    <tr valign="top">
+      <!-- LEFT column -->
+      <td width="60%">
+
+        <h3>Best-Sellers</h3>
+        <ol>
+          <li>The Great Gatsby by F. Scott Fitzgerald</li>
+          <li>To Kill a Mockingbird by Harper Lee</li>
+          <li>1984 by George Orwell</li>
+          <li>The Catcher in the Rye by J. D. Salinger</li>
+          <li>The Hobbit by J.R.R. Tolkien</li>
+        </ol>
+
+        <h3>Book Preview</h3>
+        <!-- Replace VIDEO_ID with the actual YouTube ID of a book preview video -->
+        <iframe width="420" height="315"
+                src="https://www.youtube.com/embed/VIDEO_ID"
+                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+        </iframe>
+
+      </td>
+
+      <!-- RIGHT column -->
+      <td width="40%">
+
+        <h3>Upcoming Releases</h3>
+        <ul>
+          <li>The Midnight Library</li>
+          <li>Project Hail Mary</li>
+          <li>The Four Winds</li>
+          <li>Kiara and the Sun</li>
+          <li>The Lincoln Highway</li>
+        </ul>
+
+        <h3>Newsletter Signup / Registration Form</h3>
+        <form method="post" action="#">
+          <label for="name">Name</label><br />
+          <input type="text" id="name" name="name" required /><br /><br />
+
+          <label for="email">Email</label><br />
+          <input type="email" id="email" name="email" required /><br /><br />
+
+          <label for="genre">Favorite Genre</label><br />
+          <select id="genre" name="genre">
+            <option>Fiction</option>
+            <option>Non-Fiction</option>
+            <option>Children's</option>
+            <option>Science</option>
+            <option>Fantasy</option>
+          </select><br /><br />
+
+          <label for="comments">Comments</label><br />
+          <textarea id="comments" name="comments" rows="4" cols="30"></textarea><br /><br />
+
+          <input type="submit" value="Submit" />
+        </form>
+
+      </td>
+    </tr>
+  </table>
+
+  <!-- Links Section -->
+  
+
+ 
+
+</body>
+</html>

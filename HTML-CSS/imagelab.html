@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Image Lab — Gallery</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+    header {
+        background-color: #2f4f4f;
+        color: white;
+        padding: 20px;
+    }
+    header h1 {
+        margin: 0;
+    }
+    header p {
+        margin: 5px 0 0;
+    }
+    main {
+        display: flex;
+        gap: 40px;
+        padding: 20px;
+    }
+    section {
+        flex: 2;
+    }
+    aside {
+        flex: 1;
+    }
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    figure {
+        margin: 0;
+        text-align: center;
+    }
+    figure img {
+        max-width: 100%;
+        height: auto;
+        border: 1px solid #ccc;
+    }
+    hr {
+        margin: 20px 0;
+    }
+</style>
+</head>
+<body>
+
+<header>
+    <h1>Image Lab — Gallery</h1>
+    <p>Practice with &lt;img&gt;, srcset, &lt;picture&gt;, SVG, and accessibility</p>
+</header>
+
+<main>
+    <section>
+        <h2>Responsive Image Gallery</h2>
+        <div class="gallery">
+            <figure>
+                <img src="Basmati.jpg" alt="Basmati rice — 5 kg bag">
+                <figcaption>Basmati rice — 5 kg bag.</figcaption>
+            </figure>
+            <figure>
+                <img src="Snacks.jpg" alt="Assorted Snacks Box">
+                <figcaption>Assorted Snacks Box<br><small>(WebP served when supported).</small></figcaption>
+            </figure>
+            <figure>
+                <img src="truck.jpg" alt="Delivery truck" title="Delivery truck (SVG inline with accessible title/desc)">
+                <figcaption>Delivery truck (SVG inline with accessible title/desc).</figcaption>
+            </figure>
+            <figure>
+                <img src="divider.jpg" alt="" aria-hidden="true">
+                <figcaption>Decorative divider<br><small>(not read by screen readers).</small></figcaption>
+            </figure>
+            <figure>
+                <img src="map.jpg" alt="Store map with Rice aisle and Snacks aisle" usemap="#storemap" width="200" height="150">
+                <figcaption>Click a section to navigate to that aisle<br><small>(image map)</small></figcaption>
+                <map name="storemap">
+                    <!-- Left half: Rice aisle -->
+                    <area shape="rect" coords="0,0,100,150" href="rice.html" alt="Rice aisle">
+                    <!-- Right half: Snacks aisle -->
+                    <area shape="rect" coords="100,0,200,150" href="snacks.html" alt="Snacks aisle">
+                </map>
+            </figure>
+        </div>
+        <hr>
+        <form action="#" method="post">
+            <h3>Submit Lab</h3>
+            <button type="submit">Submit Lab</button>
+        </form>
+    </section>
+
+    <aside>
+        <h2>Notes</h2>
+        <p>Use <code>srcset</code> and <code>&lt;picture&gt;</code> to reduce bandwidth and serve modern formats.</p>
+        <p>Add <code>loading=</code> lazy to defer-screen images.</p>
+    </aside>
+</main>
+
+</body>
+</html>
