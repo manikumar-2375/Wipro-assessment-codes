@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Equality & Inequality Checker</title>
+</head>
+<body>
+    <script>
+        let value1 = prompt("Enter the first value:");
+        let value2 = prompt("Enter the second value:");
+
+        let type1 = typeof value1;
+        let type2 = typeof value2;
+
+        let numValue1 = Number(value1);
+        let numValue2 = Number(value2);
+
+        let eq = (value1 == value2);       
+        let seq = (value1 === value2);     
+        let neq = (value1 != value2);     
+        let sneq = (value1 !== value2);    
+
+        let output = `
+First Value: ${value1} (${type1})
+Second Value: ${value2} (${type2})
+
+Using == : ${eq} → Equality ignores type differences
+Using === : ${seq} → Strict equality checks type too
+Using != : ${neq} → Inequality ignores type
+Using !== : ${sneq} → Strict inequality because type/value differ
+        `;
+
+        alert(output);
+    </script>
+</body>
+</html>

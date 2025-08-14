@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Income Tax Calculator</title>
+</head>
+<body>
+    <script>
+        let fullName = prompt("Enter your full name:");
+        let panNumber = prompt("Enter your PAN number (10 characters):");
+        let dobInput = prompt("Enter your Date of Birth (YYYY-MM-DD):");
+        let annualIncome = parseFloat(prompt("Enter your Annual Income in ₹:"));
+
+        panNumber = panNumber.toUpperCase();
+        if (panNumber.length !== 10) {
+            alert("Invalid PAN number! Must be exactly 10 characters.");
+            throw new Error("Invalid PAN format");
+        }
+
+        let dob = new Date(dobInput);
+        let today = new Date();
+        let age = today.getFullYear() - dob.getFullYear();
+        let monthDiff = today.getMonth() - dob.getMonth();
+        if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < dob.getDate())) {
+            age--;
+        }
+
+        let tax = 0;
+        if (annualIncome <= 250000) {
+            tax = 0;
+        } else if (annualIncome <= 500000) {
+            tax = 0.05 * annualIncome;
+        } else if (annualIncome <= 1000000) {
+            tax = 0.20 * annualIncome;
+        } else {
+            tax = 0.30 * annualIncome;
+        }
+
+        tax = Math.round(tax);
+
+        let output = `
+Name: ${fullName.toUpperCase()}
+PAN: ${panNumber}
+Age: ${age} years
+Annual Income: ₹ ${annualIncome}
+Calculated Tax: ₹ ${tax}
+        `;
+
+        alert(output);
+    </script>
+</body>
+</html>

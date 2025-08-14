@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Switchboard Control</title>
+</head>
+<body>
+    <h2>Switchboard Simulation</h2>
+    <p>Open your browser console to see the output (Right-click → Inspect → Console).</p>
+
+    <script>
+        const buildingName = "Sunrise Apartments";
+
+        let status = "OFF";
+
+        let devices = ["Light", "Fan", "AC"];
+
+        for (var i = 0; i < devices.length; i++) {
+            status = (status === "OFF") ? "ON" : "OFF";
+
+            console.log(`Checking Switch ${i + 1}: ${devices[i]} is ${status}`);
+        }
+
+        console.log(`All switches checked for ${buildingName}.`);
+        console.log(`Outside loop: var counter is ${i}`);
+
+        try {
+            buildingName = "Sunset Villas"; 
+        } catch (error) {
+            console.error("Error when trying to change const:", error.message);
+        }
+    </script>
+</body>
+</html>

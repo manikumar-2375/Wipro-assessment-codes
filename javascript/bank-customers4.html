@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bank Customers - Array Manipulation</title>
+</head>
+<body>
+    <script>
+        let count = parseInt(prompt("How many customers do you want to register?"));
+
+        let customers = [];
+        for (let i = 0; i < count; i++) {
+            let name = prompt(`Enter name of customer ${i + 1}:`);
+            customers.push(name);
+        }
+
+        let output = "Original Customers: " + customers.join(", ") + "\n";
+        output += "Customers using for...of:\n";
+        for (let cust of customers) {
+            output += cust + "\n";
+        }
+
+        output += "Customer IDs using for...in:\n";
+        for (let index in customers) {
+            output += index + "\n";
+        }
+
+        customers.push("Anita");
+        output += "After push('Anita'): " + customers.join(", ") + "\n";
+
+        customers.pop();
+        output += "After pop(): " + customers.join(", ") + "\n";
+
+        customers.splice(1, 0, "Vikram"); 
+        output += "After insert 'Vikram' at position 1: " + customers.join(", ") + "\n";
+
+        customers.splice(2, 1); 
+        output += "After delete at position 2: " + customers.join(", ") + "\n";
+
+        output += "Final Customers: " + customers.join(", ");
+
+        alert(output);
+    </script>
+</body>
+</html>
